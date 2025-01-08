@@ -24,7 +24,7 @@ const app = express();
 // middleware enable
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://mern-ecommerce-frontend-gray.vercel.app",
     methods: "GET,PUT,POST,DELETE",
   })
 );
