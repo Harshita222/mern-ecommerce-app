@@ -34,9 +34,9 @@ app.use("/api/v1/category", router);
 app.use("/api/v1/product", productRoutes);
 
 // rest api
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*", function (req, res) {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 // port
 const port = process.env.PORT || 8080;
