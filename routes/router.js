@@ -10,9 +10,6 @@ import {
 
 const router = express.Router();
 // routs
-router.get('/',(req,res)=>{
-  res.send("server is working")
-})
 // create category
 router.post(
   "/create-category",
