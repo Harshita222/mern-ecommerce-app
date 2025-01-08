@@ -24,7 +24,7 @@ const app = express();
 // middleware enable
 app.use(
   cors({
-    origin: "https://mern-ecommerce-app-fjey.onrender.com",
+    origin: "http://localhost:3000",
     methods: "GET,PUT,POST,DELETE",
   })
 );
