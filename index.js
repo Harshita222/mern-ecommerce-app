@@ -22,7 +22,12 @@ connectDB();
 const app = express();
 
 // middleware enable
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://mern-ecommerce-app-fjey.onrender.com",
+    methods: "GET,PUT,POST,DELETE",
+  })
+);
 app.use(express.json({ limit: "10mb" }));
 app.use(morgan("dev"));
 
@@ -30,9 +35,9 @@ app.use(morgan("dev"));
 
 // routes
 
-app.get('/',(req,res)=>{
-  res.send("server is working")
-})
+app.get("/", (req, res) => {
+  res.send("server is working");
+});
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/category", router);
 app.use("/api/v1/product", productRoutes);
